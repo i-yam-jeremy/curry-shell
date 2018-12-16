@@ -27,11 +27,16 @@ typedef struct command_value {
 */
 
 Command* parse_command(Lexer *lexer) {
-  //TODO
+  Token *token = Lexer_next(lexer);
+  printf("Token: %ld\n", token);
+  if (token->type == L_PAREN) {
+    printf("L_PAREN");
+  }
   return NULL;
 }
 
 Command* parse(char *s) {
   Lexer *lexer = Lexer_new(s);
+  printf("Lexer: %ld\n", lexer);
   return parse_command(lexer);
 }

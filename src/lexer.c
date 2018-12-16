@@ -21,7 +21,7 @@ Lexer* Lexer_new(char *s) {
 int is_identifier_char(char c, int length) {
   return
     ('a' <= c && c <= 'z') ||
-    ('A' >= c && c <= 'Z') ||
+    ('A' <= c && c <= 'Z') ||
     (c == '_') ||
     (length != 0 && ('0' <= c && c <= '9'));
 }
