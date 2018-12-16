@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "exec.h"
+
 #define MAX_LINE_LENGTH 1024
 
 void read_line(char **line, int maxLength) {
@@ -13,7 +15,7 @@ int main(int argc, char **argv) {
   while (1) {
     printf("> ");
     read_line(&line, MAX_LINE_LENGTH);
-    printf("Line: %s", line);
+    exec(line);
   }
   free(line);
 }
