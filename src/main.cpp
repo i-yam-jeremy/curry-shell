@@ -1,6 +1,14 @@
 #include <iostream>
 
 int main() {
-  std::cout << "Hello world!" << std::endl;
+  bool running = true;
+  while (running) {
+    std::string line;
+    std::cout << "> ";
+    std::cin >> line;
+    if (line == "exit") {
+      running = false;
+    }
+  }
   return 0;
 }
